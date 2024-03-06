@@ -1,5 +1,0 @@
-{
-  "name": "@jk/transitions-all-settled",
-  "version": "0.3.0",
-  "exports": "./mod.js"
-}

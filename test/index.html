@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Transitions All Settled</title>
+</head>
+<body>
+    <h1>Test 1</h1>
+    <div id="canvas" class="flow">
+        <div class="square first"></div>
+        <div class="square second"></div>
+        <div class="square third"></div>
+    </div>
+
+    <style>
+        .flow > * + *{
+            margin-block-start: 1em;;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition-duration: 1s;
+        }
+        .clicked .square {
+            background-color: red;
+            transform: translateX(100%);
+        }
+        .first {
+            transition-delay: 0;
+        }
+        .second {
+            transition-delay: 500ms;
+        }
+        .third {
+            transition-delay: 1000ms;
+        }
+    </style>
+
+    <script type="module">
+        import {transitionsAllSettled} from "../index.js"
+
+        const canvas = document.getElementById("canvas")
+        canvas.addEventListener("click", async () => {
+            canvas.classList.toggle("clicked")
+            await transitionsAllSettled(canvas)
+            alert("Transitions All Settled")
+        })
+    </script>
+</body>
+</html>

@@ -14,20 +14,20 @@ export function transitionsAllSettled(node) {
   }
 
   function onRun(e) {
-    transitions.push(e.currentTarget, e.propertyName)
+    transitions.push(e.target, e.propertyName)
   }
 
   function onEnd(e) {
-    if (transitions.has(e.currentTarget, e.propertyName)) {
-      transitions.pop(e.currentTarget, e.propertyName)
+    if (transitions.has(e.target, e.propertyName)) {
+      transitions.pop(e.target, e.propertyName)
       checkDone()
     }
   }
 
   function onCancel(e) {
-    if (transitions.has(e.currentTarget, e.propertyName)) {
+    if (transitions.has(e.target, e.propertyName)) {
       allEnded = false
-      transitions.pop(e.currentTarget, e.propertyName)
+      transitions.pop(e.target, e.propertyName)
       checkDone()
     }
   }
