@@ -1,0 +1,9 @@
+{
+  "name": "transitions-all-settled",
+  "version": "0.2.0",
+  "exports": "./index.js",
+  "repository": "https://github.com/jameskerr/transitions-all-settled.git",
+  "author": "James Kerr <kerr@hey.com>",
+  "license": "MIT",
+  "private": false
+}
