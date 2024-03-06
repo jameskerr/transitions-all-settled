@@ -1,6 +1,5 @@
 {
   "name": "@jk/transitions-all-settled",
   "version": "0.3.0",
-  "exports": "./mod.js",
-  "description": "This package exports a single function that accepts an HTML node and returns a promise. The promise resolves when all CSS transitions on the HTML node and its children have settled."
+  "exports": "./mod.js"
 }
