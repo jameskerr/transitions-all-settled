@@ -7,7 +7,7 @@ This is useful for exit animations to wait for all CSS transitions to settle bef
 ## Usage
 
 ```js
-import {transitionsAllSettled} from "transitions-all-settled
+import {transitionsAllSettled} from "transitions-all-settled"
 
 await transitionsAllSettled(node)
 // do something else
@@ -15,7 +15,7 @@ await transitionsAllSettled(node)
 
 ## Installation
 
-This package is on NPM so you can install it using your favorite package manager. There are quite a few these days, so I'll only show the npm way in this readme.
+This package is on [NPM](https://www.npmjs.com/package/transitions-all-settled) so you can install it using your favorite package manager. There are quite a few these days, so I'll only show the npm way in this readme.
 
 ```bash
 npm install transitions-all-settled
