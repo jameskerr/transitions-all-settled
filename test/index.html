@@ -12,6 +12,9 @@
         <div class="square second"></div>
         <div class="square third"></div>
     </div>
+    <h1>Test 2</h1>
+    <p>Throws Error When No Transitions</p>
+    <p id="error">Click Me and Expect Error</p>
 
     <style>
         .flow > * + *{
@@ -40,12 +43,22 @@
 
     <script type="module">
         import {transitionsAllSettled} from "../index.js"
-
+        //  Test 1
         const canvas = document.getElementById("canvas")
         canvas.addEventListener("click", async () => {
             canvas.classList.toggle("clicked")
             await transitionsAllSettled(canvas)
             alert("Transitions All Settled")
+        })
+
+        // Test 2
+        const error = document.getElementById("error")
+        error.addEventListener("click", async () => {
+            try {
+                await transitionsAllSettled(error)
+            } catch (e) {
+                alert(e)
+            }
         })
     </script>
 </body>
